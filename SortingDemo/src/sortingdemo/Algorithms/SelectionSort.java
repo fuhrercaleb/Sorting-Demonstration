@@ -13,10 +13,15 @@ import sortingdemo.Sortables.SortableObject;
  * @author Caleb
  */
 
-// Done Incorectly
 
 
 public class SelectionSort {
+    
+    /**
+    * This method sorts the array using the Selection Sort algorithm
+    * 
+    * @param arr The array to be sorted 
+    */
     public static void sort(SortableObject[] arr){
         for(int i = 0; i < arr.length - 1; i++){
             int min_index = i;
@@ -28,6 +33,13 @@ public class SelectionSort {
         }
     }
     
+    /**
+     * Swaps the position of the items at index1 and index 2 in the array arr
+     * 
+     * @param arr the array to be swapped 
+     * @param index1 first index to swap
+     * @param index2 second index to swap
+     */
     private static void swap(SortableObject[] _arr, int index1, int index2 ){
         SortableObject temp = _arr[index1];
         _arr[index1] = _arr[index2];

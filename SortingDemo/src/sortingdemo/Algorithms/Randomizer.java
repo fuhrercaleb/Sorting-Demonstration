@@ -7,7 +7,6 @@ package sortingdemo.Algorithms;
 
 import java.util.ArrayList;
 import java.util.Random;
-import sortingdemo.Sortables.SortableObject;
 
 
 /**
@@ -18,6 +17,11 @@ public class Randomizer {
     
     private static Random random = new Random();
     
+    /**
+    * This method randomized the positions of the objects in the array arr
+    * 
+    * @param arr The array to be randomized
+    */
     public static void randomize(Object[] arr){
         int location;
         Object temp;
@@ -32,9 +36,14 @@ public class Randomizer {
         }
     }
     
-    public static ArrayList<SortableObject> randomize(ArrayList<SortableObject > arr){
+    /**
+    * This method randomized the positions of the objects in the arrayList arr
+    * 
+    * @param arr The array to be randomized
+    */
+    public static void randomize(ArrayList<Object> arr){
         int location;
-        SortableObject temp;
+        Object temp;
         for(int i = 0; i < arr.size(); i++){
             location = i;
             while(location == i){
@@ -44,6 +53,5 @@ public class Randomizer {
             arr.set(location,arr.get(i));
             arr.set(i, temp);
         }
-        return arr;
     }
 }
