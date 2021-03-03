@@ -10,7 +10,7 @@ import sortingdemo.Sortables.SortableObject;
 
 /**
  * Bubble sort is a simple sorting algorithm that functions by swapping adjacent
- * elements in a series of passes, until no swaps are performed
+ * elements (if the first element is larger) in a series of passes, until no swaps are performed
  * 
  * 
  * @author Caleb

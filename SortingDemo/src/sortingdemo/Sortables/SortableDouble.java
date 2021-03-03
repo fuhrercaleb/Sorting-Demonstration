@@ -45,6 +45,7 @@ public class SortableDouble extends SortableObject<SortableDouble>{
     * Overrides Object.equals() so JUnit can use Assert.Equals to check if the 
     * objects values are the same, rather than checking if the objects are the same.
     * 
+    * @param obj the object to be compared with the calling object
     * @return a boolean representing whether the objects are equal to one another
     */
     @Override

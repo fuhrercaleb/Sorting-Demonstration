@@ -10,7 +10,8 @@ import java.util.Random;
 
 
 /**
- *
+ * A simple custom randomizer
+ * 
  * @author Caleb
  */
 public class Randomizer {
