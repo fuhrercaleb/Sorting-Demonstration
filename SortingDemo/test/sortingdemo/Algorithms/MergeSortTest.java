@@ -20,9 +20,9 @@ import sortingdemo.Sortables.SortableObject;
  *
  * @author caleb
  */
-public class SelectionSortTest {
+public class MergeSortTest {
     
-    public SelectionSortTest() {
+    public MergeSortTest() {
     }
     
     @BeforeClass
@@ -42,81 +42,81 @@ public class SelectionSortTest {
     }
 
     /**
-     * Test 1 of sort method, of class SelectionSort.
-     * This test sets out to prove that SelectionSort.sort() is capable of 
+     * Test1 of sort method, of class MergeSort.
+     * This test sets out to prove that MergeSort.sort() is capable of 
      * handling arrays of size 0
      */
     @Test
     public void testSort1() {
         SortableObject[] testArr1 = {};
         SortableObject[] testResult1 = {};
-        SelectionSort.sort(testArr1);
+        MergeSort.sort(testArr1,0);
         Assert.assertArrayEquals(testResult1,testArr1);
     }
     
     /**
-     * Test 2 of sort method, of class SelectionSort.
-     * This test sets out to prove that SelectionSort.sort() is capable of 
+     * Test2 of sort method, of class MergeSort.
+     * This test sets out to prove that MergeSort.sort() is capable of 
      * handling arrays of size 1
      */
     @Test
     public void testSort2() {
         SortableObject[] testArr2 = {new SortableInt(1)};
         SortableObject[] testResult2 = {new SortableInt(1)};
-        SelectionSort.sort(testArr2);
+        MergeSort.sort(testArr2,1);
         Assert.assertArrayEquals(testResult2,testArr2);
     }
     /**
-     * Test3 of sort method, of class SelectionSort.
-     * This test sets out to prove that SelectionSort.sort() functions properly
+     * Test3 of sort method, of class MergeSort.
+     * This test sets out to prove that MergeSort.sort() functions properly
      */
     @Test
     public void testSort3() {
         SortableObject[] testArr3 = {new SortableInt(3),new SortableInt(1),new SortableInt(5)};
         SortableObject[] testResult3 = {new SortableInt(1),new SortableInt(3),new SortableInt(5)}; 
-        SelectionSort.sort(testArr3);
+        MergeSort.sort(testArr3,3);
         Assert.assertArrayEquals(testResult3,testArr3);
     }
     /**
-     * Test4 of sort method, of class SelectionSort.
-     * This test sets out to prove that SelectionSort.sort() functions properly
+     * Test4 of sort method, of class MergeSort.
+     * This test sets out to prove that MergeSort.sort() functions properly
      * while handling negative numbers
      */
     @Test
     public void testSort4() {
         SortableObject[] testArr4 = {new SortableInt(3),new SortableInt(1),new SortableInt(-1),new SortableInt(5)};
         SortableObject[] testResult4 = {new SortableInt(-1),new SortableInt(1),new SortableInt(3),new SortableInt(5)}; 
-        SelectionSort.sort(testArr4);
+        MergeSort.sort(testArr4,4);
         Assert.assertArrayEquals(testResult4,testArr4);
     }
     /**
-     * Test5 of sort method, of class SelectionSort.
-     * This test sets out to prove that SelectionSort.sort() functions properly
+     * Test5 of sort method, of class MergeSort.
+     * This test sets out to prove that MergeSort.sort() functions properly
      * while handling Integer.MIN_VALUE and Integer.MAX_VALUE 
      */
     @Test
     public void testSort5() {
         SortableObject[] testArr5 = {new SortableInt(3),new SortableInt(1),new SortableInt(-1),new SortableInt(5),new SortableInt(Integer.MIN_VALUE),new SortableInt(Integer.MAX_VALUE)};
         SortableObject[] testResult5 = {new SortableInt(Integer.MIN_VALUE),new SortableInt(-1),new SortableInt(1),new SortableInt(3),new SortableInt(5),new SortableInt(Integer.MAX_VALUE)}; 
-        SelectionSort.sort(testArr5);
+        MergeSort.sort(testArr5,6);
         Assert.assertArrayEquals(testResult5,testArr5);
     }
     
     /**
-     * Test6 of sort method, of class SelectionSort.
-     * This test sets out to prove that SelectionSort.sort() is capable of 
+     * Test6 of sort method, of class MergeSort.
+     * This test sets out to prove that MergeSort.sort() is capable of 
      * handling an arrayList of size 0
      */
     @Test
     public void testSort6() {
         ArrayList<SortableObject> testArr1 = new ArrayList<>();
         ArrayList<SortableObject> testResult1 = new ArrayList<>();
-        SelectionSort.sort(testArr1);
+        MergeSort.sort(testArr1,0);
         Assert.assertEquals(testResult1,testArr1);
     }
     /**
-     * Test7 of sort method, of class SelectionSort.
-     * This test sets out to prove that SelectionSort.sort() is capable of 
+     * Test7 of sort method, of class MergeSort.
+     * This test sets out to prove that MergeSort.sort() is capable of 
      * handling an arrayList of size 1
      */
     @Test
@@ -125,12 +125,12 @@ public class SelectionSortTest {
         testArr2.add(new SortableInt(1));
         ArrayList<SortableObject> testResult2 = new ArrayList<>();
         testResult2.add(new SortableInt(1));
-        SelectionSort.sort(testArr2);
+        MergeSort.sort(testArr2,1);
         Assert.assertEquals(testResult2,testArr2);
     }
     /**
-     * Test8 of sort method, of class SelectionSort.
-     * This test sets out to prove that SelectionSort.sort() functions properly
+     * Test8 of sort method, of class MergeSort.
+     * This test sets out to prove that MergeSort.sort() functions properly
      */
     @Test
     public void testSort8() {
@@ -138,12 +138,12 @@ public class SelectionSortTest {
         testArr3.addAll(Arrays.asList(new SortableInt(3),new SortableInt(1),new SortableInt(5)));
         ArrayList<SortableObject> testResult3 = new ArrayList<>();
         testResult3.addAll(Arrays.asList(new SortableInt(1),new SortableInt(3),new SortableInt(5)));
-        SelectionSort.sort(testArr3);
+        MergeSort.sort(testArr3,3);
         Assert.assertEquals(testResult3,testArr3);
     }
     /**
-     * Test9 of sort method, of class SelectionSort.
-     * This test sets out to prove that SelectionSort.sort() functions properly
+     * Test9 of sort method, of class MergeSort.
+     * This test sets out to prove that MergeSort.sort() functions properly
      * while handling negative numbers
      */
     @Test
@@ -152,12 +152,12 @@ public class SelectionSortTest {
         testArr4.addAll(Arrays.asList(new SortableInt(3),new SortableInt(1),new SortableInt(-1),new SortableInt(5)));
         ArrayList<SortableObject> testResult4 = new ArrayList<>();
         testResult4.addAll(Arrays.asList(new SortableInt(-1),new SortableInt(1),new SortableInt(3),new SortableInt(5)));
-        SelectionSort.sort(testArr4);
+        MergeSort.sort(testArr4,4);
         Assert.assertEquals(testResult4,testArr4);
     }
     /**
-     * Test10 of sort method, of class SelectionSort.
-     * This test sets out to prove that SelectionSort.sort() functions properly
+     * Test10 of sort method, of class MergeSort.
+     * This test sets out to prove that MergeSort.sort() functions properly
      * while handling Integer.MIN_VALUE and Integer.MAX_VALUE 
      */
     @Test
@@ -166,7 +166,7 @@ public class SelectionSortTest {
         testArr5.addAll(Arrays.asList(new SortableInt(3),new SortableInt(1),new SortableInt(-1),new SortableInt(5),new SortableInt(Integer.MIN_VALUE),new SortableInt(Integer.MAX_VALUE)));
         ArrayList<SortableObject> testResult5 = new ArrayList<>();
         testResult5.addAll(Arrays.asList(new SortableInt(Integer.MIN_VALUE),new SortableInt(-1),new SortableInt(1),new SortableInt(3),new SortableInt(5),new SortableInt(Integer.MAX_VALUE)));
-        SelectionSort.sort(testArr5);
+        MergeSort.sort(testArr5,6);
         Assert.assertEquals(testResult5,testArr5);
     }
 }
